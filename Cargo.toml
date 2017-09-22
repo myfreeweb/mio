@@ -18,8 +18,8 @@ exclude       = [
 ]
 
 [features]
-with-deprecated = []
-default = ["with-deprecated"]
+#with-deprecated = []
+#default = ["with-deprecated"]
 
 [dependencies]
 lazycell = "0.5.0"
@@ -34,7 +34,6 @@ fuchsia-zircon-sys = "0.2.0"
 
 [target.'cfg(unix)'.dependencies]
 libc = { git = "https://github.com/myfreeweb/libc" }
-
 
 [target.'cfg(windows)'.dependencies]
 winapi = "0.2.1"

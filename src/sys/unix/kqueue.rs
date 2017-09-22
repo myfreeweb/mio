@@ -44,6 +44,8 @@ macro_rules! kevent {
             fflags: 0,
             data: 0,
             udata: $data as UData,
+            #[cfg(target_os = "freebsd")]
+            ext: [0; 4]
         }
     }
 }
