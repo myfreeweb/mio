@@ -18,8 +18,8 @@ exclude       = [
 ]
 
 [features]
-#with-deprecated = []
-#default = ["with-deprecated"]
+with-deprecated = []
+default = ["with-deprecated"]
 
 [dependencies]
 lazycell = "0.5.0"
