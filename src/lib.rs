@@ -80,7 +80,7 @@
 
 #![deny(warnings, missing_docs, missing_debug_implementations)]
 
-//extern crate lazycell;
+extern crate lazycell;
 extern crate net2;
 extern crate iovec;
 
