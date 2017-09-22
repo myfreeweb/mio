@@ -131,7 +131,7 @@ impl TcpStream {
             let slice = iovec::as_os_slice_mut(bufs);
             let len = cmp::min(<libc::c_int>::max_value() as usize, slice.len());
             let rc = libc::readv(self.inner.as_raw_fd(),
-                                 slice.as_ptr(),
+                                 slice.as_ptr() as *const libc::iovec,
                                  len as libc::c_int);
             if rc < 0 {
                 Err(io::Error::last_os_error())
@@ -146,7 +146,7 @@ impl TcpStream {
             let slice = iovec::as_os_slice(bufs);
             let len = cmp::min(<libc::c_int>::max_value() as usize, slice.len());
             let rc = libc::writev(self.inner.as_raw_fd(),
-                                  slice.as_ptr(),
+                                 slice.as_ptr() as *const libc::iovec,
                                   len as libc::c_int);
             if rc < 0 {
                 Err(io::Error::last_os_error())
