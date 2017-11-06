@@ -27,7 +27,7 @@ log      = "0.3.1"
 slab     = "0.3.0"
 net2     = "0.2.31"
 iovec    = "0.1.1"
-libc = { git = "https://github.com/myfreeweb/libc" }
+libc = { git = "https://github.com/myfreeweb/libc", branch = "fbsd12-stat-order" }
 
 [target.'cfg(target_os = "fuchsia")'.dependencies]
 fuchsia-zircon = "0.2.1"
